@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo</title>
+
+    <script>
+      let nums = [1,2,5,4,3];
+
+      nums.forEach(function (value1, index) {
+     
+    for(let i=index;i<nums.length;i++)
+    {
+          if (nums[i]>nums[i+1]) {
+
+            let temp = nums[i];
+            nums[i] = nums[i+1];
+            nums[i+1] = temp;
+          }
+    }
+
+});
+      
+      console.log(nums);
+      
+    </script>
+  </head>
+  <body></body>
+</html>

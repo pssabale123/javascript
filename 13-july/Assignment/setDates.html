@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function setYear() {
+        let d = new Date();
+        d.setFullYear("2019");
+        console.log(d);
+      }
+      setYear();
+
+      function setYearWithMonthAndDay() {
+        let d = new Date();
+        d.setFullYear("2019", "08", "09");
+        console.log(d);
+      }
+
+      setYearWithMonthAndDay();
+
+      function AddDays() {
+        const d = new Date();
+        d.setDate(d.getDate() + 50);
+        console.log(d);
+      }
+      AddDays();
+
+      function dateCompare() {
+        let text = "";
+        const today = new Date();
+        const someday = new Date();
+        someday.setFullYear(2100, 0, 14);
+
+        if (someday > today) {
+          text = "Today is before January 14, 2100.";
+        } else {
+          text = "Today is after January 14, 2100.";
+        }
+
+        console.log("text = "+text);
+      }
+
+      dateCompare();
+    </script>
+  </head>
+  <body></body>
+</html>

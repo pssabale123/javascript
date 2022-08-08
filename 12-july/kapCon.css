@@ -1,0 +1,53 @@
+.container {
+  background-color: aqua;
+  width: 70%;
+  padding: 20px;
+  border: solid;
+  border-width: thin;
+  margin: 0 auto;
+}
+
+.row1 {
+  padding: 20px;
+  width: 600px;
+  margin-top: 30px;
+  background-color: blanchedalmond;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.col1 {
+  width: 50%;
+  margin-top: 30px;
+  display: inline-block;
+}
+.col1 label {
+  text-align: center;
+  font-size: 28px;
+  float: right;
+  margin: 0 auto;
+}
+.col2 {
+  width: 49%;
+  margin-top: 30px;
+  display: inline-block;
+}
+.col2 input {
+  margin-left: 50px;
+  width: 300px;
+  padding: 16px;
+}
+.find {
+  margin-top: 30px;
+  margin-left: 60%;
+}
+.find input {
+  width: 110px;
+  height: 30px;
+  border-radius: 10px;
+}
+.out {
+  margin-top: 50px;
+}
+.out h3 {
+  text-align: center;
+}

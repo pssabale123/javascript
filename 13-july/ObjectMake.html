@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      let cadi = {
+        model: "Cadallac",
+        make: "GM",
+        year: 1995,
+        color: "tan",
+        isConvertible: true,
+        passengers: 5,
+        mileage: 12892,
+
+        start: function () {
+          console.log("start");
+        },
+        stop: function () {
+          console.log("stop");
+        },
+        run: function () {
+          console.log("Vehicle is running....");
+        },
+      };
+
+      var chevy = {
+        make: "Chevy",
+        model: "Bel Air",
+        year: 1957,
+        color: "red",
+        isConvertible: false,
+        passengers: 2,
+        mileage: 1021,
+
+        start: function () {
+          console.log("start");
+        },
+        stop: function () {
+          console.log("stop");
+        },
+        run: function () {
+          console.log("Vehicle is running....");
+        },
+      };
+
+      cadi.start();
+
+      cadi.run();
+
+      cadi.stop();
+
+      chevy.start();
+
+      chevy.run();
+
+      chevy.stop();
+
+      let newCar = { ...cadi, started: false };
+
+      console.log(newCar);
+
+      //   const carColor =cadi.color;
+      //   const carPassengers =cadi.passengers;
+
+      const { color: carColor, passengers: passenger } = cadi;
+    </script>
+  </head>
+  <body></body>
+</html>

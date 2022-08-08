@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+        function widget(partNo, size) {
+            this.no = partNo;
+            this.breed = size;
+
+        }
+        function FormFactor(material, widget) {
+                this.material = material;
+                this.widget = widget;
+             
+        }
+
+    
+
+        var widgetA = new widget(100, "large");
+        var widgetB = new widget(101, "small");
+        var formFactorA = new FormFactor("plastic", widgetA);
+        var formFactorB = new FormFactor("metal", widgetB);
+
+       //let formF = new FormFactor();
+
+        console.log(formFactorA);
+        console.log(formFactorB);
+    </script>
+  </head>
+
+  <body></body>
+</html>

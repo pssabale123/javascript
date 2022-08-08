@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype</title>
+
+    <script>
+      function Dog(name, breed, weight) {
+        this.name = name;
+        this.breed = breed;
+        this.weight = weight;
+
+
+      }
+
+      Dog.prototype.bark = function () {
+          if (this.weight > 25) {
+            alert(this.name + " says Woof!");
+          } else {
+            alert(this.name + " says Yip!");
+          }
+        };
+
+       let fido = new Dog("fido","mixed",26);
+       
+ 
+        let spike =new Dog("spike","mixed",24); 
+
+        spike.bark = function () {
+          if (this.weight > 25) {
+            alert(this.name + " says Woof!");
+          } else {
+            alert(this.name + " says Yyyyyyy!");
+          }
+        };
+
+
+
+Dog.prototype.sitting = false;
+Dog.prototype.sit = function() {
+if (this.sitting) {
+console.log(this.name + " is already sitting");
+} else {
+this.sitting = true;
+console.log(this.name + " is now sitting");
+}
+};
+      fido.bark();
+      spike.bark();
+
+      console.log(fido.hasOwnProperty("sitting"));
+      fido.sit();
+      console.log(fido.hasOwnProperty("sitting"));
+      fido.sit();
+
+      spike.sit();
+
+    </script>
+  </head>
+  <body></body>
+</html>

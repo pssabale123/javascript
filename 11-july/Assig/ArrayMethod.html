@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Methods</title>
+
+    <script>
+      let arr = ["asd", "dfg", "kilo"];
+
+      let str = arr.toString(); //convert array into string using toString();
+
+      document.write(str + "<br>");
+
+      document.write("this is join <br>");
+      let st = arr.join(Math.random().toString()); //convert array into string using join
+
+      document.write(st + "<br>");
+
+      let last = arr.pop(); //remove last element and return last element
+      document.write("pop =" + last + "<br>");
+      document.write(arr.toString() + "<br>");
+
+      let push = arr.push("last"); //push add data where the index in
+      document.write(arr.toString() + "<br>");
+
+      let arr2 = [1, 2, 3, 4, 5, 6];
+      arr2.shift(); //shift delete first element and shift other element to lower index
+      document.write(arr2.toString() + "<br> <br> <br> <br>");
+
+      let arr3 = [1, 2, 3, 4, 5, 6];
+      arr3.unshift(0);
+      document.write(arr3.toString() + "<br> <br> ");
+
+      delete arr3[0]; //delete an element and show undefined
+      document.write(arr3[0]);
+
+      let conCat = arr3.concat(arr2, arr);
+      document.write(conCat + "<br><br>");
+
+      // The splice() method adds new items to an array.
+
+      //   splice(positionToadd,how-many-remove-ele,adding ele....);
+
+      function spliceMethod() {
+        document.write("Splice Method is <br><br>");
+        let arr = ["a", "b", "c", "d", "e"];
+        //arr.splice(2, 2,"x","y","z");
+        arr.splice(4);
+        document.write(arr + "<br><br>");
+      }
+      spliceMethod();
+
+      //The slice() method slices out a piece of an array.
+
+      function sliceMethod() {
+        let arr = ["a", "b", "c", "d", "e"];
+        let x = arr.slice(1); //first exclude
+        document.write(x + "<br><br>");
+
+        let y = arr.slice(3); //before 3 exclude and other takes
+        document.write(y + "<br><br>");
+
+        let z = arr.slice(1, 4); //start from 1 and 4  exclude and in between  takes
+        document.write(z + "<br><br>");
+      }
+      sliceMethod();
+    </script>
+  </head>
+  <body></body>
+</html>

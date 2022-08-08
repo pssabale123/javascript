@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      //   class Dog
+      //   {
+      //     constructor(name,breed="mixed",weight=23){
+      //     this.name=name;
+      //     this.breed=breed;
+      //     this.weight=weight;
+      //     }
+      //   }
+
+      //   let fido = new Dog("fido");
+
+      //   console.log(fido);
+
+      let canEat = {
+        eat() {
+          console.log("eating");
+        },
+      };
+      let canWalk = {
+        walk() {
+          console.log("walking");
+        },
+      };
+      let canSwim = {
+        swim() {
+          console.log("swiming");
+        },
+      };
+
+      let canFly = {
+        fly() {
+          console.log("flying");
+        },
+      };
+
+      // function createObject(...objects){
+      //     let newObj=Object.assign({},...objects);
+      //     return newObj;
+      // }
+
+      // let fish = createObject(canEat,canSwim);
+
+      // console.log(fish);
+
+      function Dog(name, weight) {
+        this.name = name;
+        this.weight = weight; 
+      }
+
+      function createObject(target, ...objects) {
+        let newObj = Object.assign(target, ...objects);
+      }
+
+      //createObject(Dog.prototype, canEat, canSwim);
+
+      let fido = new Dog("fido", 34);
+
+      console.log(fido);
+    </script>
+  </head>
+  <body></body>
+</html>

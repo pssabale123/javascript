@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaprekar's Constant</title>
+
+    <link rel="stylesheet" href="./kapCon.css" />
+    <script src="./kapConstant.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <div class="col1">
+          <label for="number">Kaprekar's Constant </label>
+        </div>
+        <div class="col2">
+          <input type="text" name="" id="number" maxlength="4" placeholder="Enter 4 digit value"
+          />
+
+        </div>
+      </div>
+      <div class="find">
+        <input type="button" value="Find" id="btn" onclick="getNum()"/>
+        <input type="submit" value="Refresh" id="refresh" onclick="refresh()">
+      </div>
+    </div>
+    <div id="out" style="width:600px;padding: 20px;margin:10px auto">
+      <p id="output" style="padding:3px"></p>
+    </div>
+  </body>
+</html>

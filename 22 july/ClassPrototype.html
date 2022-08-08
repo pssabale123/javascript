@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+    <script>
+
+        class Dog
+        {
+            constructor(name,breed,weight)
+            {
+                this.name=name;
+                this.breed=breed;
+                this.weight=weight;
+            }
+             
+             bark(){
+
+                if(this.weight>20)
+                    console.log(this.name+" says bhow bhow");
+                else    
+                    console.log(this.name+" says bhow bhow");
+             }
+
+        }
+
+        class ShowDog extends Dog{
+
+            constructor(name,breed,weight,trainer)
+            {
+                super(name,breed,weight);
+                this.trainer=trainer;
+            }
+
+            bait(){
+                console.log(this.name+" is batting");
+            }
+        }
+
+        let fido = new ShowDog("fido","mixed",23);
+        fido.bark();
+
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

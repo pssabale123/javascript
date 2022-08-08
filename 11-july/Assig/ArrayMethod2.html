@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function sorting() {
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.sort();
+        document.write(fruits + "<br><br>");
+      }
+
+      sorting();
+
+      function reverse() {
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        fruits.sort();
+        fruits.reverse();
+        document.write(fruits + "<br><br>");
+      }
+
+      reverse();
+
+      function sortNumbers() {
+        const nums = [1, , 23, 45, 22, 21, 20, 5, 55, 456];
+        nums.sort(function (a, b) {
+          return a - b;
+        });
+        document.write(nums + "<br><br>");
+      }
+
+      sortNumbers();
+
+      function sortArrayDesc() {
+        const nums = [1, , 23, 45, 22, 21, 20, 5, 55, 456];
+        nums.sort(function (a, b) {
+          return b - a;
+        });
+        document.write(nums + "<br><br>");
+      }
+
+      sortArrayDesc();
+
+      function sortArrayRandom() {
+        const nums = [1, , 23, 45, 22, 21, 20, 5, 55, 456];
+        nums.sort(function (a, b) {
+          return 0.5 - Math.random();
+        });
+        document.write(nums + "<br><br>");
+      }
+
+      sortArrayRandom();
+
+      function fisherYates() {
+        let points = [20, 30, 40, 33, 44, 11];
+        for (let i = 0; i < points.length; i++) {
+          let j = Math.floor(Math.random() * i);
+          let k = points[j];
+          points[j] = points[i];
+          points[i] = k;
+        }
+
+        document.write(points + "<br><br>");
+      }
+      fisherYates();
+
+      function findMaxMin() {
+        const nums = [1, 23, 45, 22, 21, 20, 5, 55, 456];
+
+        let maxEle = Math.max.apply(null, nums);
+
+        document.write(maxEle + "<br>");
+
+        let minEle = Math.min.apply(null, nums);
+
+        document.write(minEle);
+      }
+
+      findMaxMin();
+
+      function objectSort() {
+        const cars = [
+          { type: "Volvo", year: 2016 },
+          { type: "Saab", year: 2001 },
+          { type: "BMW", year: 2010 },
+        ];
+
+        cars.sort(function (a, b) {
+          return a.year - b.year;
+        });
+
+        for (let i = 0; i < cars.length; i++) {
+          document.write("<br>" + cars[i].type + " " + cars[i].year + " <br>");
+        }
+      }
+
+      objectSort();
+
+      function stringObjectSort() {
+        const cars = [
+          { type: "Volvo", year: 2016 },
+          { type: "Saab", year: 2001 },
+          { type: "BMW", year: 2010 },
+        ];
+
+        cars.sort(function (a, b) {
+          let x = a.type.toLowerCase();
+          let y = b.type.toLowerCase();
+
+          if (x > y) return 1;
+          else if (x < y) return -1;
+          else return 0;
+        });
+
+        document.write("Sorting using type ");
+
+        for (let i = 0; i < cars.length; i++) {
+          document.write("<br>" + cars[i].type + " " + cars[i].year + " <br>");
+        }
+      }
+      stringObjectSort();
+    </script>
+  </head>
+  <body></body>
+</html>

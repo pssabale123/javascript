@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Effective Solution</title>
+
+    <script>
+
+            let scores = [
+                    60, 50, 60, 58, 54, 54, 58, 50, 52, 54, 48, 69, 34, 55, 51, 52, 44, 51,
+                    69, 64, 66, 55, 52, 61, 46, 31, 57, 52, 44, 18, 41, 53, 55, 61, 69, 69,
+                    ];
+                    let costs = [
+                    0.25, 0.27, 0.25, 0.25, 0.25, 0.25, 0.33, 0.31, 0.25, 0.29, 0.27, 0.22,
+                    0.31, 0.25, 0.25, 0.33, 0.21, 0.25, 0.25, 0.25, 0.28, 0.25, 0.24, 0.22,
+                    0.2, 0.25, 0.3, 0.25, 0.24, 0.25, 0.25, 0.25, 0.27, 0.25, 0.26, 0.29,
+                    ];
+
+                    let maxScoreArray=[];
+
+
+         function bubbleSolution(scores,costs)
+         {
+
+                    let max=0;
+
+                    for (let i = 0; i < scores.length; i++) {
+
+                    if (max < scores[i])
+                    max = scores[i];
+
+                    console.log("Bubble Solution #" + i + " has scores " + scores[i]);
+                    }
+
+
+                
+
+                for (let i = 0; i < scores.length; i++) {
+                    if (scores[i] == max) {
+                        console.log("Bubble solution of #"+i+" Highest scores is  " + scores[i]+" cost is "+costs[i]);
+                        maxScoreArray.push(i);
+                    }
+                    }
+
+                    let minCost=costs[maxScoreArray[0]];
+                    let v=0;
+
+                    for(let i=0;i<maxScoreArray.length;i++)
+                    {
+                        
+                        if(minCost>maxScoreArray[i])
+                        {
+                            minCost=costs[maxScoreArray[i]];
+                            v=i;
+                        }
+                    }
+
+                   // console.log("Cost Effective solution is at #"+maxScoreArray[v]+" with cost is "+minCost)
+
+
+
+                    // let m = Math.max.apply(Math, scores);
+                    // console.log(m);
+
+                    return v;
+        }
+
+       let result = bubbleSolution(scores,costs);
+
+       console.log("Cost Effective solution is at #"+maxScoreArray[result]+" with cost is "+costs[maxScoreArray[result]]);
+
+
+
+    </script>
+  </head>
+  <body></body>
+</html>

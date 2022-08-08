@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./from.js"></script>
+    <style>
+      .field {
+        width: 500px;
+        margin: 0 auto;
+        background-color: cadetblue;
+      }
+      .col1 {
+        display: inline-block;
+        width: 20%;
+        margin-top: 4px;
+      }
+      .col2 {
+        display: inline-block;
+        width: 60%;
+        margin-top: 10px;
+      }
+
+      .col1 label {
+        font: 5px;
+      }
+
+      .change {
+        margin-left: 40px;
+      }
+
+      .change p {
+        color: blue;
+      }
+
+      table {
+        margin-top: 30px;
+      }
+
+      table th,
+      td {
+        width: 120px;
+        text-align: center;
+      }
+      table,
+      th,
+      td {
+        text-align: center;
+        border: 1px solid;
+        border-collapse: collapse;
+      }
+    </style>
+    <script src="./from.js" defer></script>
+  </head>
+  <body>
+    <form action="">
+      <fieldset class="field">
+        <form>
+          <div class="maindiv">
+            <div class="col1">
+              <label for="name">Name :</label>
+            </div>
+
+            <div class="col2">
+              <input type="text" class="col2F" id="name" />
+            </div>
+
+            <div class="col1">
+              <label for="email">Email :</label>
+            </div>
+
+            <div class="col2">
+              <input type="email" class="col2F" id="email" />
+            </div>
+
+            <div class="col1">
+              <label for="pass">Password :</label>
+            </div>
+
+            <div class="col2">
+              <input type="password" id="pass" />
+            </div>
+
+            <div class="col1">
+              <label for="mob">Mob no:</label>
+            </div>
+            <div class="col2">
+              <input type="tel" id="mob" />
+            </div>
+
+            <div class="col1">
+              <label for="dob">D.O.B :</label>
+            </div>
+
+            <div class="col2">
+              <input type="date" id="dob" />
+            </div>
+
+            <div class="col1">
+              <label for="addr">Address</label>
+            </div>
+            <div class="col2">
+              <textarea cols="40" id="addr"></textarea>
+            </div>
+
+            <div class="col1">
+              <label>Gender : </label>
+            </div>
+            <div class="col2">
+              <label for="male">Male</label>
+              <input type="radio" name="gender" id="male" />
+              <label for="female">Female</label>
+              <input type="radio" name="gender" id="female" />
+            </div>
+
+            <div class="col1">
+              <label>Subject : </label>
+            </div>
+
+            <div class="col2" onchange="changeFunction()">
+              <input type="checkbox" id="py" />
+              <label for="py">Python</label>
+
+              <input type="checkbox" id="java" onchange="changeFunction()" />
+              <label for="java">JAVA</label>
+
+              <input
+                type="checkbox"
+                id="javascript"
+                onchange="changeFunction()"
+              />
+              <label for="javascript">Javascript</label>
+
+              <input type="checkbox" id="php" onchange="changeFunction()" />
+              <label for="php">PHP</label>
+            </div>
+            <div class="change">
+              <p id="para"></p>
+            </div>
+
+            <div style="margin-top: 40px; float: right">
+              <input type="button" id="btn" value="Submit" onclick="onSubmit()"/>
+            </div>
+          </div>
+        </form>
+      </fieldset>
+    </form>
+
+    <div>
+      <div id="data">
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>MobNo</th>
+            <th>Dob</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th>Subject</th>
+          </tr>
+          <tr>
+            <td id="s-name"></td>
+            <td id="s-email"></td>
+            <td id="s-pass"></td>
+            <td id="s-mob"></td>
+            <td id="s-dob"></td>
+            <td id="s-addr"></td>
+            <td id="s-gender"></td>
+            <td id="s-subject"></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

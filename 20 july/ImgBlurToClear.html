@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Blur to Clear </title>
+
+    <style>
+
+        img{
+
+            width:200px;
+            height: 200px;
+        }
+    </style>
+
+    <script>
+
+           function init()
+           {
+
+              let images = document.getElementsByTagName("img");
+
+              for(let image of images)
+              {
+
+                   image.onclick=function(){
+
+                            id = image.id;
+                            image.src = "./img/"+id+".jpg";
+
+                            setTimeout(function(){
+
+                                image.src = "./img/"+id+"blur.jpg";
+                            },2000);
+                   };
+              }
+
+           }
+           window.onload=init;
+    </script>
+
+
+</head>
+<body>
+
+    <img src="./img/zeroblur.jpg" id="zero" />
+    <img src="./img/oneblur.jpg" id="one" />
+    <img src="./img/twoblur.jpg" id="two" />
+    <img src="./img/threeblur.jpg" id="three" />
+    <img src="./img/fourblur.jpg" id="four" />
+    <img src="./img/fiveblur.jpg" id="five" />
+   
+    
+</body>
+</html>

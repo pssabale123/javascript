@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unique element</title>
+
+    <script>
+      const arr1 = [3, 2, 1, 4, 5];
+      const arr2 = [3, 4, 9, 8, 7, 6];
+
+      const newArr = [...arr1, ...arr2];
+
+      //   document.write(" "+newArr);
+
+      const result = [];
+
+      for (let i = 0; i < newArr.length; i++) {
+        let j;
+        for (j = 0; j < i; j++) {
+          if (newArr[i] == newArr[j]) {
+            break;
+          }
+        }
+        if (i == j) {
+          result.push(newArr[i]);
+        } else {
+          document.write(" " + newArr[i]);
+        }
+      }
+
+      document.write("first array = " + arr1 + "<br>");
+      document.write("second Array = " + arr2 + "<br>");
+      document.write("Distinct element = " + result + "<br>");
+    </script>
+  </head>
+
+  <body></body>
+</html>

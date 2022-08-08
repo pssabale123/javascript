@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function Dog(name,breed,weight){
+
+            this.name=name;
+            this.breed=breed;
+            this.weight=weight;
+        }
+
+
+        Dog.prototype.bark=function (){
+
+            if((this.weight)>=10)
+            {
+                console.log(this.name+" says Bhow Bhow...");
+            }
+            else{
+                console.log(this.name+" says Woof Woof...");
+            }
+
+        };
+
+        let fido = new Dog("fido","mixed",13);
+
+        fido.bark();
+
+        function ShowDog(name,breed,weight,trainer)
+        {
+              Dog.call(this,name,breed,weight);
+              this.trainer=trainer;
+        }
+       
+         ShowDog.prototype = new Dog();
+
+         ShowDog.prototype.bait=function (){
+            console.log(this.name+" is baitting");
+         }
+
+         let spike = new ShowDog("spike","mixed",34);
+         spike.bark();
+
+         spike.bait();
+         console.log(spike.name);
+ 
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

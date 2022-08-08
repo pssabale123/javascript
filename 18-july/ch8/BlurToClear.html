@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlurToClear</title>
+
+    <style>
+
+      .images{
+       display: grid;
+       grid-template-columns: auto auto auto auto;
+       gap: 10px;
+      }
+      img {
+        width: 160px;
+        height: 160px;
+      }
+
+    </style>
+
+    <script src="./blur.js" defer></script>
+
+    <!-- <script>
+
+      function handleClick() {
+
+        let image = document.getElementById("img").setAttribute("src", "./zero.jpg");
+        
+      }
+
+    </script> -->
+
+  </head>
+  <body>
+    <div class="images">
+      <img src="./img/zeroblur.jpg" alt="./img/zero.jpg" id="img-1"/>
+      <img src="./img/oneblur.jpg" alt="./img/one.jpg" id="img-2"/>
+      <img src="./img/twoblur.jpg" alt="./img/two.jpg" id="img-3"/>
+      <img src="./img/threeblur.jpg" alt="./img/three.jpg" id="img-4"/>
+      <img src="./img/fourblur.jpg" alt="./img/four.jpg" id="img-5"/>
+      <img src="./img/fiveblur.jpg" alt="./img/five.jpg" id="img-6"/>
+    </div>
+    
+    <div>
+      <br>
+      <input type="button" value="clear" onclick="changeImage()" />
+    </div>
+  </body>
+</html>

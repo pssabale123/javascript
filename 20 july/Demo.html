@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+                      // let migrating = true;
+
+                      // if (migrating) {
+                      //     quack(4);
+                      //     fly(4);
+                      // }
+
+                      // let fly = function (num) {
+                      //     for (let i = 0; i < num; i++) {
+                      //     console.log("Flying!");
+                      //     }
+                      // };
+
+                      // function quack(num) {
+
+                      //     for (let i = 0; i < num; i++) {
+                      //     console.log("Quack!");
+                      //     }
+                      // }
+
+
+      let migrating = true;
+
+      let fly = function(num) {
+            let sound = "Flying";
+
+            for (let i = 0; i < num; i++) {
+            wingFlapper();
+            }
+
+            function wingFlapper() {
+            console.log(sound);
+            }
+            
+      };
+      function quack(num) {
+            let sound = "Quack";
+
+            for (let i = 0; i < num; i++) {
+            quacker();
+            }
+
+
+            let quacker = function() {
+            console.log(sound);
+            };
+           
+    }
+
+      if (migrating) {
+     // quack(4);
+      fly(4);
+      }
+
+
+
+
+
+
+
+    </script>
+  </head>
+  <body></body>
+</html>

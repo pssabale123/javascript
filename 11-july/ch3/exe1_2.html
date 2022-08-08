@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function concatArray() {
+        let words1 = ["1", "2", "3", "4", "5"];
+        let words2 = [
+          "empowered",
+          "value-added",
+          "oriented",
+          "focused",
+          "aligned",
+        ];
+
+        let input1 = Math.floor(Math.random() * words1.length);
+        let input2 = Math.floor(Math.random() * words2.length);
+
+        return `${words1[input1]} ${words2[input2]}`;
+      }
+      console.log(concatArray());
+    </script>
+  </head>
+  <body></body>
+</html>

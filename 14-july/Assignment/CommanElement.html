@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Distinct Element</title>
+
+    <script>
+      const arr1 = [3, 2, 1,3, 4, 5];
+      const arr2 = [3, 4, 9, 3, 8, 7, 6];
+
+      const result = [];
+
+      for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+          if (arr1[i] == arr2[j]) {
+            result.push(arr1[i]);
+            break;
+          }
+        }
+      }
+
+      document.write("first array = " + arr1 + "<br>");
+      document.write("second Array = " + arr2 + "<br>");
+      document.write("comman element = " + result + "<br>");
+
+      //     const arr3=[3,5,6]; //three array comman element
+
+      //    let k=0;
+
+      //    for(let i=0;i<arr1.length;i++)
+      //     {
+      //         for(let j=0;j<arr2.length;j++)
+      //         {
+      //              if(arr1[i]==arr2[j])
+      //              {
+      //                 while(k<arr3.length)
+      //                 {
+      //                     if(arr1[i]==arr3[k])
+      //                     {
+      //                         console.log(arr1[i]);
+      //                     }
+
+      //                     k++;
+      //                 }
+      //              }
+      //         }
+      //     }
+
+      
+      
+      // const newArr = [...arr1, ...arr2];
+
+      // //   document.write(" "+newArr);
+
+      // const result2 = [];
+
+      // for (let i = 0; i < newArr.length; i++) {
+      //   let j=0;
+      //   for (j ; j <= i; j++) {
+      //     if (newArr[i] == newArr[j] ) {
+      //       break;
+      //     }
+      //   }
+      //   if (i != j) {
+      //     result2.push(newArr[i]);
+          
+      //   }
+      // }
+
+      // document.write("first array = " + arr1 + "<br>");
+      // document.write("second Array = " + arr2 + "<br>");
+      // document.write("Distinct element = " + result2 + "<br>");
+
+      
+    </script>
+  </head>
+  <body></body>
+</html>

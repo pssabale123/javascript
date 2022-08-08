@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Iteration</title>
+
+    <script>
+      function forEachMethod() {
+        let arr = [21, 23, 2, 22, 33, 44, 43, 32];
+
+        arr.forEach(function (ele) {
+          console.log(" " + ele);
+        });
+      }
+      forEachMethod();
+
+      function forEachMethod2() {
+        console.log("\n\n");
+        let arr = [21, 23, 2, 22, 33, 44, 43, 32];
+
+        arr.forEach((ele) => {
+          console.log(" " + ele);
+        });
+      }
+      forEachMethod2();
+
+      function mapMethod() {
+        let arr = [12, 1, 2, 3, 4, 5, 6, 7];
+
+        let nums = arr.map(function (value) {
+          return value * 2;
+        });
+
+        console.log(nums);
+      }
+
+      mapMethod();
+
+      function filterMethod() {
+        const arr = [-1, 0, 8, 7, -2, 5, -9, -4, -6];
+        let nums = arr.filter(function (ele) {
+          if (ele > 0) return ele;
+        });
+
+        console.log(" " + nums + "\n");
+      } 
+      filterMethod();
+    </script>
+  </head>
+  <body></body>
+</html>

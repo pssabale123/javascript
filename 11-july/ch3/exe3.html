@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      let scores = [
+        60, 50, 60, 58, 54, 54, 58, 50, 52, 54, 48, 69, 34, 55, 51, 52, 44, 51,
+        69, 64, 66, 55, 52, 61, 46, 31, 57, 52, 44, 18, 41, 53, 55, 61, 51, 44,
+      ];
+
+      let max = 0;
+
+      console.log("length of scores is " + scores.length);
+
+      for (let i = 0; i < scores.length; i++) {
+        if (max < scores[i]) max = scores[i];
+
+        console.log("Bubble Solution " + i + " scores is " + scores[i]);
+      }
+
+      for (let i = 0; i < scores.length; i++) {
+        if (scores[i] == max) {
+          console.log("max found at position  " + i);
+        }
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+         function Album(title,artist,year)
+         {
+             this.title =title;
+             this.artist = artist;
+             this.year = year;
+             this.play = function () {
+
+                if(this.artist=="Pink Mouse")
+                   console.log("song is playing...!!!");
+                
+             }
+
+         }
+
+         let darkside = new Album("Dark Side of the Cheese ","Pink Mouse",1971);
+         darkside.play();
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
